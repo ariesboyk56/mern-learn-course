@@ -1,0 +1,49 @@
+POST http://localhost:8080/api/auth/register
+Content-Type: application/json
+
+{
+  "username" : "nguoidung2",
+  "password" : "nguoidung2"
+}
+
+###
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+  "username" : "nguoidung2",
+  "password" : "nguoidung2"
+}
+
+###
+POST http://localhost:8080/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTk5ZDlkNmMzMmRlMjMyOWY0MGQ3ZGYiLCJpYXQiOjE2Mzc0NzI3MjZ9.1vgm8wVVEbD0XjOXM_J75I-aioEH80ss4PfGWLkZfrU
+
+{
+  "title": "NodeJS",
+  "description" : "NodeJS",
+  "url" : "nodejs.org"
+}
+
+###
+GET http://localhost:8080/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTk5ZDlkNmMzMmRlMjMyOWY0MGQ3ZGYiLCJpYXQiOjE2Mzc0NzY3NDV9.pgpjXwCtjwnIS7_ytP9PdiwYSLF8oDIAUj3AQLxexQw
+
+###
+PUT http://localhost:8080/api/posts/6199da27c32de2329f40d7e1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTk5ZDlkNmMzMmRlMjMyOWY0MGQ3ZGYiLCJpYXQiOjE2Mzc0NzY3NDV9.pgpjXwCtjwnIS7_ytP9PdiwYSLF8oDIAUj3AQLxexQw
+ 
+{
+  "title": "Vue1",
+  "description": "Vue1",
+  "url": "vue.org",
+  "status": "LEARNING"
+}
+
+###
+DELETE http://localhost:8080/api/posts/6199da27c32de2329f40d7e1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTk5ZDlkNmMzMmRlMjMyOWY0MGQ3ZGYiLCJpYXQiOjE2Mzc0NzY3NDV9.pgpjXwCtjwnIS7_ytP9PdiwYSLF8oDIAUj3AQLxexQw
+ 
+
